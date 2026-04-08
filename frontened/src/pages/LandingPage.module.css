@@ -1,0 +1,245 @@
+.wrap {
+  position: relative;
+  z-index: 1;
+}
+
+.hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 60px 24px 80px;
+  position: relative;
+}
+
+.heartsFloat {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.heartParticle {
+  position: absolute;
+  opacity: 0;
+  animation: heartFloat 6s ease-in-out infinite;
+}
+
+@keyframes heartFloat {
+  0% {
+    opacity: 0;
+    transform: translateY(0) rotate(0deg) scale(0.8);
+  }
+  15% {
+    opacity: 0.55;
+  }
+  80% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-180px) rotate(25deg) scale(1.1);
+  }
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(233, 30, 140, 0.08);
+  border: 1px solid rgba(233, 30, 140, 0.22);
+  border-radius: 50px;
+  padding: 7px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #e91e8c;
+  margin-bottom: 28px;
+  animation: fadeDown 0.6s ease 0.1s both;
+}
+
+.heroTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(44px, 6vw, 76px);
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 20px;
+  color: #1a0a2e;
+  animation: fadeDown 0.6s ease 0.2s both;
+}
+
+.heroSub {
+  font-size: clamp(15px, 2vw, 18px);
+  color: #6b7280;
+  max-width: 560px;
+  line-height: 1.75;
+  margin-bottom: 40px;
+  animation: fadeDown 0.6s ease 0.3s both;
+}
+
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  justify-content: center;
+  animation: fadeDown 0.6s ease 0.4s both;
+}
+
+.statsRow {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 64px;
+  padding: 28px 48px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  border: 1px solid rgba(233, 30, 140, 0.14);
+  animation: fadeUp 0.7s ease 0.5s both;
+}
+
+.statItem {
+  text-align: center;
+}
+
+.statNum {
+  font-size: 30px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #e91e8c, #7c3aed);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.statLabel {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
+  font-weight: 500;
+}
+
+/* Features */
+.features {
+  padding: 80px 24px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 48px;
+  color: #1a0a2e;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.featureCard {
+  background: var(--card-bg, #fdf2f8);
+  border: 1px solid rgba(233, 30, 140, 0.1);
+  border-radius: 20px;
+  padding: 28px;
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.featureCard:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(124, 58, 237, 0.14);
+  border-color: rgba(233, 30, 140, 0.25);
+}
+
+.featureIcon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.featureTitle {
+  font-size: 17px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #1a0a2e;
+}
+
+.featureDesc {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.65;
+}
+
+/* CTA Banner */
+.ctaBanner {
+  background: linear-gradient(135deg, #e91e8c, #7c3aed);
+  padding: 80px 24px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.ctaBanner::before {
+  content: '💕';
+  position: absolute;
+  font-size: 200px;
+  opacity: 0.06;
+  top: -20px;
+  left: -40px;
+}
+
+.ctaBanner::after {
+  content: '✨';
+  position: absolute;
+  font-size: 160px;
+  opacity: 0.06;
+  bottom: -20px;
+  right: -20px;
+}
+
+.ctaInner {
+  position: relative;
+  z-index: 1;
+}
+
+.ctaInner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.ctaInner p {
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 32px;
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

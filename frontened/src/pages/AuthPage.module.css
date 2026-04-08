@@ -1,0 +1,112 @@
+.pageWrap {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.card {
+  background: white;
+  border-radius: 24px;
+  padding: 48px 32px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(233, 30, 140, 0.1);
+  animation: pageEnter 0.4s ease;
+}
+
+.logoMark {
+  font-size: 48px;
+  text-align: center;
+  margin-bottom: 24px;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.title {
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 8px;
+  color: #1a0a2e;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6b7280;
+  text-align: center;
+  margin-bottom: 28px;
+}
+
+.errorBox {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #7f1d1d;
+  margin-bottom: 20px;
+}
+
+.divider {
+  position: relative;
+  margin: 28px 0;
+  text-align: center;
+}
+
+.divider span {
+  background: white;
+  padding: 0 12px;
+  font-size: 13px;
+  color: #9ca3af;
+  font-weight: 500;
+  position: relative;
+  z-index: 1;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #e5e7eb;
+}
+
+.switchText {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 20px;
+}
+
+.switchText a {
+  color: #e91e8c;
+  font-weight: 600;
+}
+
+.backLink {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 12px;
+}
+
+.backLink a {
+  color: #6b7280;
+  font-weight: 500;
+}
